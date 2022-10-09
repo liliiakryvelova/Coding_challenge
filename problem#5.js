@@ -65,6 +65,21 @@ function insertionSort(arr){
   return arr;
 }
 
+const bubbleSort = (arr) => {
+  let size = arr.length;
+  for(let i=0; i<size; i++){
+    for(let j=0; j<arr[j+1]; j++){
+      if(arr[j] > arr[j+1]){
+        let tmp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = tmp;
+      }
+    }
+  }
+  return arr;
+}
+
 console.log(quickSort(arr));
 console.log(mergeSort(arr));
 console.log(insertionSort(arr));
+console.log(bubbleSort(arr));
